@@ -32,6 +32,12 @@
     background: #292929;
 }
 
+
+html {
+    scroll-behavior: smooth;
+}
+
+
 body {
     height: 100vh;
     background-image: url(../media/background.svg);
@@ -44,7 +50,7 @@ body {
 }
 
 div.separador {
-    height: 13rem;
+    height: 10rem;
     background-color: #a2fda100;
 }
 
@@ -133,7 +139,7 @@ div.separador {
 .seccion-proyectos {
     justify-content: center;
     text-align: center;
-    
+
 
     .proyecto {
         margin: 5rem auto;
@@ -159,7 +165,7 @@ div.separador {
             }
 
             a {
-                button {
+                .boton {
                     font-size: 1.2rem;
                     margin: 0.2rem;
                     font-family: bebaskai;
@@ -173,7 +179,7 @@ div.separador {
                 }
 
                 :hover {
-                    font-size: 1.4rem;
+                    box-shadow: 0 0 5px 3px #925ff0;
                 }
             }
 
@@ -202,6 +208,83 @@ div.separador {
 
         :hover {
             box-shadow: 0 0 10px 5px #925ff0;
+        }
+    }
+}
+
+h2 {
+    margin: 2rem auto;
+    text-align: center;
+}
+
+
+.informacion-contacto {
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    margin: 5rem 3rem;
+    justify-content: space-between;
+
+    .formulario {
+        font-family: bebaskai;
+        width: 100%;
+
+        
+
+        .formulario-registro {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            color: white;
+            backdrop-filter: blur(10px);
+            padding: 1rem;
+            border-radius: 1rem;
+
+            .formulario__grupo {
+                display: flex;
+                flex-direction: column;
+                width: 48%;
+                margin: 0.5rem 0;
+
+                .input__mensaje {
+                    min-height: 8rem;
+                }
+
+                .boton {
+                    font-size: 1.2rem;
+                    margin: 0.2rem;
+                    font-family: bebaskai;
+                    background-color: #a3fda1;
+                    box-shadow: 0px 0px 10px 2px #925ff0;
+                    color: rgb(0, 0, 0);
+                    padding: 0.5rem 2.5rem;
+                    border-radius: 20px;
+                    border: none;
+                    cursor: pointer;
+                    transition: 120ms all ease-in-out;
+                }
+
+                p{
+                    font-family: bebaskai;
+                    font-size: 1.1rem;
+                    margin: auto;
+                    text-align: left;
+                }
+
+                .iconos-redes {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+
+            
+                    img {
+                        width: 3rem;
+                        margin: 0 1rem;
+                        filter: drop-shadow(5px 5px 5px #925ff0);
+                    }
+                }
+            }
         }
     }
 }
