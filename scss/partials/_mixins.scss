@@ -1,0 +1,27 @@
+@mixin textos() {
+    h1{
+        color: white;
+        font-family: bebaskai;
+        font-size: 4rem;
+    }
+    h2{
+        color: white;
+        font-family: helveticaa;
+        font-size: 3rem;
+    }
+    h3{
+        color: white;
+        font-family: helveticaa;
+        font-size: 2rem;
+    }
+    h5{
+        color: white;
+        font-family: helveticaa;
+        font-size: 1.8rem;
+    }
+    p{
+        color: white;
+        font-family: helveticaa;
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,200 @@
+@font-face {
+  font-family: "bebaskai";
+  src: url(../media/fonts/BebasKai.woff2);
+}
+@font-face {
+  font-family: "helveticaa";
+  src: url(../media/fonts/helvetica.woff2);
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+h1 {
+  color: white;
+  font-family: bebaskai;
+  font-size: 4rem;
+}
+
+h2 {
+  color: white;
+  font-family: helveticaa;
+  font-size: 3rem;
+}
+
+h3 {
+  color: white;
+  font-family: helveticaa;
+  font-size: 2rem;
+}
+
+h5 {
+  color: white;
+  font-family: helveticaa;
+  font-size: 1.8rem;
+}
+
+p {
+  color: white;
+  font-family: helveticaa;
+  font-size: 1rem;
+}
+
+::-webkit-scrollbar {
+  /* display: none; */
+  width: 5px;
+  height: 8px;
+  background-color: #575757;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #292929;
+}
+
+body {
+  height: 100vh;
+  background-image: url(../media/background.svg);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.oculto {
+  display: none;
+}
+
+div.separador {
+  height: 13rem;
+  background-color: rgba(162, 253, 161, 0);
+}
+
+.navbar {
+  display: flex;
+  background-color: rgba(41, 41, 41, 0.6);
+  width: 100%;
+  height: 3.5rem;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 90;
+}
+.navbar ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+}
+.navbar ul li a {
+  width: auto;
+  margin: 2rem;
+  padding: 1rem;
+  font-family: bebaskai;
+  font-size: 1.2rem;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+}
+.navbar ul li :hover {
+  background-color: #a3fda1;
+}
+
+.titulo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+}
+.titulo .foto_personal {
+  width: 20rem;
+  filter: drop-shadow(10px 10px 5px #925ff0);
+}
+.titulo .iconos_curso {
+  display: flex;
+  flex-direction: row;
+}
+.titulo .iconos_curso img {
+  width: 3rem;
+  margin: 1.5rem 1rem 0 1rem;
+}
+
+.biografia {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+}
+.biografia p {
+  text-shadow: 1px 1px 2px #292929;
+  margin-top: 2em;
+  width: 100%;
+  padding: 1rem 2rem;
+  text-align: justify;
+}
+
+.seccion-proyectos {
+  justify-content: center;
+  text-align: center;
+}
+.seccion-proyectos .proyecto {
+  margin: 5rem auto;
+  width: 30%;
+  background-color: #292929;
+  border-radius: 2%;
+  padding: 0.5rem;
+  box-shadow: 5px 5px 5px 2px #925ff0;
+}
+.seccion-proyectos .proyecto .imagen-proyecto {
+  width: 100%;
+  border-radius: 2%;
+}
+.seccion-proyectos .proyecto .info-proyecto {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.seccion-proyectos .proyecto .info-proyecto h5 {
+  margin: 1rem 0;
+}
+.seccion-proyectos .proyecto .info-proyecto a button {
+  font-size: 1.2rem;
+  margin: 0.2rem;
+  font-family: bebaskai;
+  background-color: #a3fda1;
+  color: rgb(0, 0, 0);
+  padding: 0.5rem 2.5rem;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  transition: 120ms all ease-in-out;
+}
+.seccion-proyectos .proyecto .info-proyecto a :hover {
+  font-size: 1.4rem;
+}
+
+.boton-contacto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.boton-contacto a button {
+  font-size: 5rem;
+  font-family: bebaskai;
+  background-color: #0b0b0b;
+  box-shadow: 0px 0px 10px 2px #925ff0;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  transition: 120ms all ease-in-out;
+}
+.boton-contacto a :hover {
+  box-shadow: 0 0 10px 5px #925ff0;
+}
+
+/*# sourceMappingURL=style.css.map */
