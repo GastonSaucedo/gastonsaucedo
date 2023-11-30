@@ -90,6 +90,20 @@
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="./js/loader.js"></script>
+    <script>
+        let check = document.querySelector(".check")
+
+        check.addEventListener("click", idioma)
+
+        function idioma() {
+            let id = check.checked
+            if (id == true) {
+                location.href = "../inicioIngles.html"
+            } else {
+                location.href = "../index.html"
+            }
+        }
+    </script>
     <script src="./js/idioma.js"></script>
 
     </div>
