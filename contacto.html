@@ -7,26 +7,35 @@
     <title>Contacto</title>
     <link rel="icon" href="./media/facivon.png">
     <link rel="stylesheet" href="./css/style.css">
+
 </head>
 
 <body>
-    <div class="language-selector"></div>
 
+    <div class="centrado" id="onload">
+        <div class="loader"></div>
+    </div>
 
+    <div id="cuerpoPagina" class="oculto">
 
-
-    <div id="languageSpanish" class="">
+        <div class="language-selector">
+            <img src="./media/languages-icons/spanish-icon.png" alt="spanish-icon">
+            <input type="checkbox" class="check">
+            <img src="./media/languages-icons/english-icon.png" alt="english-icon">
+        </div>
         <div class="navbar">
             <ul>
                 <li><a href="./index.html#inicio">Inicio</a></li>
                 <li><a href="./index.html#biografia">Biografia</a></li>
                 <li><a href="./index.html#proyectos">Proyectos</a></li>
-                <li><a href="">Contacto</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
             </ul>
         </div>
-
+    
+        <div class="separador"></div>
+    
         <h2>Contacto</h2>
-
+    
         <div class="informacion-contacto">
             <form action="https://formspree.io/f/mzbllkpr" method="post" class="formulario">
                 <div class="formulario-registro">
@@ -36,7 +45,7 @@
                     </div>
                     <div class="formulario__grupo" id="grupo__numero">
                         <label for="text">Teléfono: </label>
-                        <input type="number" name="numero" placeholder="123456789" required>
+                        <input type="number" name="numero" placeholder="+00012345678" required>
                     </div>
                     <div class="formulario__grupo" id="grupo__correo">
                         <label for="correo">Correo electrónico: </label>
@@ -48,15 +57,15 @@
                         <label for="mensaje">Mensaje: </label>
                         <textarea type="text" name="mensaje" placeholder="Escriba su mensaje" class="input__mensaje"
                             required cols="30"></textarea>
-
+    
                     </div>
-
+    
                     <div class="formulario__grupo">
-                        <p>- Por favor llene este formulario para solicitar un presupuesto y nos comunicaremos lo mas
+                        <p>- Por favor llene este formulario para solicitar su cotización y nos comunicaremos lo mas
                             pronto posible <br>- Recuerde que tambien puede contactarnos en nuestras redes sociales:
                         </p>
                     </div>
-
+    
                     <div class="formulario__grupo">
                         <input type="submit" value="Enviar" class="boton">
                     </div>
@@ -73,14 +82,14 @@
                         </div>
                     </div>
                 </div>
-
+    
             </form>
         </div>
+    </div>
 
-
-
-
-        <!--  <div class="separador" id="proyectos"></div> -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./js/loader.js"></script>
+    <script src="./js/idioma.js"></script>
 
     </div>
 </body>

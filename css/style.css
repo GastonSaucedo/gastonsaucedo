@@ -2,10 +2,6 @@
   font-family: "bebaskai";
   src: url(../media/fonts/BebasKai.woff2);
 }
-@font-face {
-  font-family: "helveticaa";
-  src: url(../media/fonts/helvetica.woff2);
-}
 * {
   box-sizing: border-box;
   padding: 0;
@@ -13,6 +9,77 @@
   text-decoration: none;
 }
 
+.loader {
+  transform: rotateZ(45deg);
+  perspective: 1000px;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  color: #a3fda1;
+}
+
+.loader:before,
+.loader:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  border-radius: 50%;
+  transform: rotateX(70deg);
+  animation: 1s spin linear infinite;
+}
+
+.loader:after {
+  color: #925ff0;
+  transform: rotateY(70deg);
+  animation-delay: 0.4s;
+}
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotateZ(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotateZ(360deg);
+  }
+}
+@keyframes rotateccw {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+@keyframes spin {
+  0%, 100% {
+    box-shadow: 0.2em 0px 0 0px currentcolor;
+  }
+  12% {
+    box-shadow: 0.2em 0.2em 0 0 currentcolor;
+  }
+  25% {
+    box-shadow: 0 0.2em 0 0px currentcolor;
+  }
+  37% {
+    box-shadow: -0.2em 0.2em 0 0 currentcolor;
+  }
+  50% {
+    box-shadow: -0.2em 0 0 0 currentcolor;
+  }
+  62% {
+    box-shadow: -0.2em -0.2em 0 0 currentcolor;
+  }
+  75% {
+    box-shadow: 0px -0.2em 0 0 currentcolor;
+  }
+  87% {
+    box-shadow: 0.2em -0.2em 0 0 currentcolor;
+  }
+}
 h1 {
   color: white;
   font-family: bebaskai;
@@ -21,25 +88,25 @@ h1 {
 
 h2 {
   color: white;
-  font-family: helveticaa;
+  font-family: helvetica;
   font-size: 3rem;
 }
 
 h3 {
   color: white;
-  font-family: helveticaa;
+  font-family: helvetica;
   font-size: 2rem;
 }
 
 h5 {
   color: white;
-  font-family: helveticaa;
+  font-family: helvetica;
   font-size: 1.8rem;
 }
 
 p {
   color: white;
-  font-family: helveticaa;
+  font-family: helvetica;
   font-size: 1rem;
 }
 
@@ -65,13 +132,64 @@ body {
   background-size: cover;
 }
 
-.oculto {
-  display: none;
+div.separador {
+  height: 6rem;
+  background-color: rgba(162, 253, 161, 0);
 }
 
-div.separador {
-  height: 10rem;
-  background-color: rgba(162, 253, 161, 0);
+.language-selector {
+  display: flex;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 91;
+  align-items: center;
+}
+.language-selector img {
+  width: 2rem;
+  margin: 0 1rem;
+}
+.language-selector .check {
+  position: relative;
+  bottom: 5px;
+  width: 50px;
+}
+.language-selector .check::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 25px;
+  background: #925ff0;
+  border-radius: 25px;
+}
+.language-selector .check::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background: white;
+  border-radius: 25px;
+  transition: 0.25s ease-in-out;
+  border: 2px solid #0b0b0b;
+  box-sizing: border-box;
+}
+.language-selector .check:checked::after {
+  left: 25px;
+  border: 2px solid #0b0b0b;
+}
+.language-selector .check:checked::before {
+  background: #a3fda1;
+}
+
+.centrado {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  z-index: 100;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #292929;
 }
 
 .navbar {
@@ -80,10 +198,14 @@ div.separador {
   width: 100%;
   height: 3.5rem;
   align-items: center;
-  justify-content: center;
-  position: sticky;
+  justify-content: space-around;
+  position: fixed;
   top: 0;
   z-index: 90;
+}
+.navbar .espaciador {
+  width: 2rem;
+  margin: 0 3rem;
 }
 .navbar ul {
   display: flex;
@@ -95,12 +217,14 @@ div.separador {
   margin: 2rem;
   padding: 1rem;
   font-family: bebaskai;
-  font-size: 1.2rem;
+  font-size: 1.7rem;
   cursor: pointer;
   text-decoration: none;
   color: white;
+  transition: 100ms all ease-in-out;
 }
 .navbar ul li :hover {
+  color: #292929;
   background-color: #a3fda1;
 }
 
@@ -209,9 +333,8 @@ h2 {
 .informacion-contacto {
   display: flex;
   flex-direction: row;
-  max-width: 100%;
-  margin: 5rem 3rem;
-  justify-content: space-between;
+  max-width: 80%;
+  margin: 5rem auto;
 }
 .informacion-contacto .formulario {
   font-family: bebaskai;
@@ -234,6 +357,13 @@ h2 {
   width: 48%;
   margin: 0.5rem 0;
 }
+.informacion-contacto .formulario .formulario-registro .formulario__grupo label {
+  font-size: 1.5rem;
+}
+.informacion-contacto .formulario .formulario-registro .formulario__grupo label span {
+  font-family: helvetica;
+  font-size: 0.8rem;
+}
 .informacion-contacto .formulario .formulario-registro .formulario__grupo input {
   height: 3rem;
   border-radius: 10px;
@@ -242,7 +372,7 @@ h2 {
 }
 .informacion-contacto .formulario .formulario-registro .formulario__grupo input::placeholder {
   padding: 1rem;
-  color: white;
+  color: rgb(204, 204, 204);
   font-family: bebaskai;
 }
 .informacion-contacto .formulario .formulario-registro .formulario__grupo .input__mensaje {
@@ -253,7 +383,7 @@ h2 {
 }
 .informacion-contacto .formulario .formulario-registro .formulario__grupo .input__mensaje::placeholder {
   padding: 1rem;
-  color: white;
+  color: rgb(204, 204, 204);
   font-family: bebaskai;
 }
 .informacion-contacto .formulario .formulario-registro .formulario__grupo .boton {
@@ -284,6 +414,14 @@ h2 {
   width: 3rem;
   margin: 0 1rem;
   filter: drop-shadow(5px 5px 5px #925ff0);
+}
+
+.hidden {
+  overflow: hidden;
+}
+
+.oculto {
+  display: none !important;
 }
 
 /*# sourceMappingURL=style.css.map */

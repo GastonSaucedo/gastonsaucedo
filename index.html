@@ -10,7 +10,17 @@
 </head>
 
 <body>
-    <div id="languageSpanish" class="">
+
+    <div class="centrado" id="onload">
+        <div class="loader"></div>
+    </div>
+
+    <div id="cuerpoPagina" class="oculto">
+        <div class="language-selector">
+            <img src="./media/languages-icons/spanish-icon.png" alt="spanish-icon">
+            <input type="checkbox" class="check">
+            <img src="./media/languages-icons/english-icon.png" alt="english-icon">
+        </div>
         <div class="navbar">
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
@@ -36,7 +46,7 @@
 
         <div class="separador" id="biografia"></div>
 
-        <div class="biografia" >
+        <div class="biografia">
             <h2>Biografia</h2>
             <p>Soy un apasionado diseñador y desarrollador web, con gran afición por la fotografía y la producción de
                 material audiovisual. Poseo gran capacidad de adaptación, carisma y creatividad, que me permiten ser un
@@ -68,9 +78,15 @@
         <div class="boton-contacto">
             <a href="./contacto.html"><button>CONTACTO</button></a>
         </div>
-        <div class="separador"></div>
-
     </div>
+
+
+    <div class="separador"></div>
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./js/loader.js"></script>
+
+    <script src="./js/idioma.js"></script>
 </body>
 
 </html>

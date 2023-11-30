@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaston Saucedo</title>
+    <link rel="icon" href="../media/facivon.png">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <div class="centrado" id="onload">
+        <div class="loader"></div>
+    </div>
+
+    <div id="cuerpoPagina" class="oculto">
+        <div class="language-selector">
+            <img src="../media/languages-icons/spanish-icon.png" alt="spanish-icon">
+            <input type="checkbox" class="check" checked>
+            <img src="../media/languages-icons/english-icon.png" alt="english-icon">
+        </div>
+        <div class="navbar">
+            <ul>
+                <li><a href="./index.html#inicio">Home</a></li>
+                <li><a href="./index.html#biografia">Bio</a></li>
+                <li><a href="./index.html#proyectos">Proyects</a></li>
+                <li><a href="./contacto.html">Contact</a></li>
+            </ul>
+        </div>
+    
+        <div class="separador"></div>
+    
+        <h2>Contact</h2>
+    
+        <div class="informacion-contacto">
+            <form action="https://formspree.io/f/mzbllkpr" method="post" class="formulario">
+                <div class="formulario-registro">
+                    <div class="formulario__grupo" id="grupo__nombre">
+                        <label for="nombres">Name: </label>
+                        <input type="text" name="nombre" placeholder="Enter your name" required>
+                    </div>
+                    <div class="formulario__grupo" id="grupo__numero">
+                        <label for="text">Phone Number: <span>(Please add your country code, ex: +000 1234
+                                1234)</span></label>
+                        <input type="text" name="numero" placeholder="+00012345678" required>
+                    </div>
+                    <div class="formulario__grupo" id="grupo__correo">
+                        <label for="correo">Email: </label>
+                        <input type="email" name="email" placeholder="yourmail@mail.com" required>
+                    </div>
+                    <div class="formulario__grupo" id="grupo__correo2">
+                    </div>
+                    <div class="formulario__grupo" id="grupo__mensaje">
+                        <label for="mensaje">Message: </label>
+                        <textarea type="text" name="mensaje" placeholder="Write your message" class="input__mensaje"
+                            required cols="30"></textarea>
+    
+                    </div>
+    
+                    <div class="formulario__grupo">
+                        <p>- Please fill out this form to get a quote and we will come back to you as soon as possible
+                            <br>- Kindly bear in mind that you can also contact us on our social media:
+                        </p>
+                    </div>
+    
+                    <div class="formulario__grupo">
+                        <input type="submit" value="Submit" class="boton">
+                    </div>
+                    <div class="formulario__grupo">
+                        <div class="iconos-redes">
+                            <a href="https://www.instagram.com/dash__ph__/"><img src="../media/icons/instagram.png"
+                                    alt="instagram-icon"></a>
+                            <a href="https://wa.me/+59894947180"><img src="../media/icons/whatsapp.png"
+                                    alt="whatsapp-icon"></a>
+                            <a href="https://github.com/GastonSaucedo"><img src="../media/icons/github.png"
+                                    alt="github-icon"></a>
+                            <a href="https://www.linkedin.com/in/gaston-emanuel-saucedo-suarez-4788a71a2/"><img
+                                    src="../media/icons/linkedin.png" alt="linkedin-icon"></a>
+                        </div>
+                    </div>
+                </div>
+    
+            </form>
+        </div>
+    
+        <div class="separador"></div>
+    </div>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../js/loader.js"></script>
+    <script src="../js/idioma.js"></script>
+</body>
+
+</html>
