@@ -2,6 +2,7 @@
   font-family: "bebaskai";
   src: url(../media/fonts/BebasKai.woff2);
 }
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -42,44 +43,58 @@
   0% {
     transform: translate(-50%, -50%) rotateZ(0deg);
   }
+
   100% {
     transform: translate(-50%, -50%) rotateZ(360deg);
   }
 }
+
 @keyframes rotateccw {
   0% {
     transform: translate(-50%, -50%) rotate(0deg);
   }
+
   100% {
     transform: translate(-50%, -50%) rotate(-360deg);
   }
 }
+
 @keyframes spin {
-  0%, 100% {
+
+  0%,
+  100% {
     box-shadow: 0.2em 0px 0 0px currentcolor;
   }
+
   12% {
     box-shadow: 0.2em 0.2em 0 0 currentcolor;
   }
+
   25% {
     box-shadow: 0 0.2em 0 0px currentcolor;
   }
+
   37% {
     box-shadow: -0.2em 0.2em 0 0 currentcolor;
   }
+
   50% {
     box-shadow: -0.2em 0 0 0 currentcolor;
   }
+
   62% {
     box-shadow: -0.2em -0.2em 0 0 currentcolor;
   }
+
   75% {
     box-shadow: 0px -0.2em 0 0 currentcolor;
   }
+
   87% {
     box-shadow: 0.2em -0.2em 0 0 currentcolor;
   }
 }
+
 h1 {
   color: white;
   font-family: bebaskai;
@@ -145,15 +160,18 @@ div.separador {
   z-index: 91;
   align-items: center;
 }
+
 .language-selector img {
   width: 2rem;
   margin: 0 1rem;
 }
+
 .language-selector .check {
   position: relative;
   bottom: 5px;
   width: 50px;
 }
+
 .language-selector .check::before {
   content: "";
   position: absolute;
@@ -162,6 +180,7 @@ div.separador {
   background: #925ff0;
   border-radius: 25px;
 }
+
 .language-selector .check::after {
   content: "";
   position: absolute;
@@ -173,10 +192,12 @@ div.separador {
   border: 2px solid #0b0b0b;
   box-sizing: border-box;
 }
+
 .language-selector .check:checked::after {
   left: 25px;
   border: 2px solid #0b0b0b;
 }
+
 .language-selector .check:checked::before {
   background: #a3fda1;
 }
@@ -203,15 +224,18 @@ div.separador {
   top: 0;
   z-index: 90;
 }
+
 .navbar .espaciador {
   width: 2rem;
   margin: 0 3rem;
 }
+
 .navbar ul {
   display: flex;
   flex-direction: row;
   list-style-type: none;
 }
+
 .navbar ul li a {
   width: auto;
   margin: 2rem;
@@ -223,6 +247,7 @@ div.separador {
   color: white;
   transition: 100ms all ease-in-out;
 }
+
 .navbar ul li :hover {
   color: #292929;
   background-color: #a3fda1;
@@ -235,14 +260,17 @@ div.separador {
   justify-content: center;
   height: 80%;
 }
+
 .titulo .foto_personal {
   width: 20rem;
   filter: drop-shadow(10px 10px 5px #925ff0);
 }
+
 .titulo .iconos_curso {
   display: flex;
   flex-direction: row;
 }
+
 .titulo .iconos_curso img {
   width: 3rem;
   margin: 1.5rem 1rem 0 1rem;
@@ -255,6 +283,7 @@ div.separador {
   align-items: center;
   width: 80%;
 }
+
 .biografia p {
   text-shadow: 1px 1px 2px #292929;
   margin-top: 2em;
@@ -267,6 +296,7 @@ div.separador {
   justify-content: center;
   text-align: center;
 }
+
 .seccion-proyectos .proyecto {
   margin: 5rem auto;
   width: 30%;
@@ -275,19 +305,23 @@ div.separador {
   padding: 0.5rem;
   box-shadow: 5px 5px 5px 2px #925ff0;
 }
+
 .seccion-proyectos .proyecto .imagen-proyecto {
   width: 100%;
   border-radius: 2%;
 }
+
 .seccion-proyectos .proyecto .info-proyecto {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
 }
+
 .seccion-proyectos .proyecto .info-proyecto h5 {
   margin: 1rem 0;
 }
+
 .seccion-proyectos .proyecto .info-proyecto a .boton {
   font-size: 1.2rem;
   margin: 0.2rem;
@@ -300,6 +334,7 @@ div.separador {
   cursor: pointer;
   transition: 120ms all ease-in-out;
 }
+
 .seccion-proyectos .proyecto .info-proyecto a :hover {
   box-shadow: 0 0 5px 3px #925ff0;
 }
@@ -309,6 +344,7 @@ div.separador {
   justify-content: center;
   align-items: center;
 }
+
 .boton-contacto a button {
   font-size: 5rem;
   font-family: bebaskai;
@@ -321,6 +357,7 @@ div.separador {
   cursor: pointer;
   transition: 120ms all ease-in-out;
 }
+
 .boton-contacto a :hover {
   box-shadow: 0 0 10px 5px #925ff0;
 }
@@ -336,10 +373,12 @@ h2 {
   max-width: 80%;
   margin: 5rem auto;
 }
+
 .informacion-contacto .formulario {
   font-family: bebaskai;
   width: 100%;
 }
+
 .informacion-contacto .formulario .formulario-registro {
   display: flex;
   flex-direction: row;
@@ -351,41 +390,49 @@ h2 {
   border-radius: 1rem;
   box-shadow: 7px 7px 10px 1px #925ff0;
 }
+
 .informacion-contacto .formulario .formulario-registro .formulario__grupo {
   display: flex;
   flex-direction: column;
   width: 48%;
   margin: 0.5rem 0;
 }
+
 .informacion-contacto .formulario .formulario-registro .formulario__grupo label {
   font-size: 1.5rem;
 }
+
 .informacion-contacto .formulario .formulario-registro .formulario__grupo label span {
   font-family: helvetica;
   font-size: 0.8rem;
 }
+
 .informacion-contacto .formulario .formulario-registro .formulario__grupo input {
   height: 3rem;
   border-radius: 10px;
   background-color: #292929;
   border: none;
 }
+
 .informacion-contacto .formulario .formulario-registro .formulario__grupo input::placeholder {
   padding: 1rem;
   color: rgb(204, 204, 204);
   font-family: bebaskai;
 }
+
 .informacion-contacto .formulario .formulario-registro .formulario__grupo .input__mensaje {
   min-height: 8rem;
   border-radius: 10px;
   border: none;
   background-color: #292929;
 }
+
 .informacion-contacto .formulario .formulario-registro .formulario__grupo .input__mensaje::placeholder {
   padding: 1rem;
   color: rgb(204, 204, 204);
   font-family: bebaskai;
 }
+
 .informacion-contacto .formulario .formulario-registro .formulario__grupo .boton {
   font-size: 1.2rem;
   margin: 0.2rem;
@@ -399,17 +446,20 @@ h2 {
   cursor: pointer;
   transition: 120ms all ease-in-out;
 }
+
 .informacion-contacto .formulario .formulario-registro .formulario__grupo p {
   font-family: bebaskai;
   font-size: 1.1rem;
   margin: auto;
   text-align: left;
 }
+
 .informacion-contacto .formulario .formulario-registro .formulario__grupo .iconos-redes {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
+
 .informacion-contacto .formulario .formulario-registro .formulario__grupo .iconos-redes img {
   width: 3rem;
   margin: 0 1rem;
@@ -422,6 +472,18 @@ h2 {
 
 .oculto {
   display: none !important;
+}
+
+
+.botonIdioma {
+  background-color: rgba(245, 222, 179, 0);
+  border-radius: 100px;
+  border-color: #0b0b0b00;
+}
+
+.imagenBotonIdioma:hover {
+  cursor: pointer;
+  filter: drop-shadow(2px 2px 0.5px #925ff0);
 }
 
 /*# sourceMappingURL=style.css.map */

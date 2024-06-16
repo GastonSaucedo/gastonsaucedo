@@ -15,11 +15,10 @@
         <div class="loader"></div>
     </div>
 
-    <div id="cuerpoPagina" class="oculto">
+    <div id="cuerpoEspanol" class="">
         <div class="language-selector">
-            <img src="./media/languages-icons/spanish-icon.png" alt="spanish-icon">
-            <input type="checkbox" class="check">
-            <img src="./media/languages-icons/english-icon.png" alt="english-icon">
+            <button id="botonIngles" class="botonIdioma"><img src="./media/languages-icons/english-icon.png"
+                    class="imagenBotonIdioma" alt="english-icon"></button>
         </div>
         <div class="navbar">
             <ul>
@@ -81,6 +80,71 @@
         </div>
     </div>
 
+    <div id="cuerpoIngles" class="oculto">
+        <div class="language-selector">
+            <button id="botonEspanol" class="botonIdioma"><img src="./media/languages-icons/spanish-icon.png"
+                    class="imagenBotonIdioma" alt="spanish-icon"></button>
+        </div>
+
+        <div class="navbar">
+            <ul>
+                <li><a href="#inicio">Home</a></li>
+                <li><a href="#biografia">Bio</a></li>
+                <li><a href="#proyectos">Proyects</a></li>
+                <li><a href="./contactoIngles.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="separador" id="inicio">
+            <span></span>
+        </div>
+        <div class="titulo">
+            <img src="./media/foto.svg" class="foto_personal" alt="">
+            <h1>Gaston Saucedo</h1>
+            <h3>Web Designer and Developer</h3>
+            <div class="iconos_curso">
+                <img src="./media/icons/html.png" alt="icono-html">
+                <img src="./media/icons/css.png" alt="icono-css">
+                <img src="./media/icons/reactjs.png" alt="icono-reactjs">
+                <img src="./media/icons/adobe.png" alt="icono-adobe">
+            </div>
+        </div>
+
+        <div class="separador" id="biografia"></div>
+
+        <div class="biografia">
+            <h2>Bio</h2>
+            <p>I am a passionate web designer and developer, experienced in photography and audiovisual production. I
+                have
+                great adaptability, charisma and creativity, which makes me a significant collaborator within a team but
+                also independent and self sufficient to work alone. I consider myself a proactive person, with a great
+                capability to create bold compositions with considerable impact, leaving a mark on the public. I believe
+                that understanding customers' needs and helping them realize their vision is fundamental for my work.
+            </p>
+        </div>
+
+        <div class="separador" id="proyectos"></div>
+
+        <div class="seccion-proyectos">
+            <h2>Proyects</h2>
+            <div class="proyecto">
+                <img src="./media/proyects/aguatec/aguatec-thumbnail.png" class="imagen-proyecto"
+                    alt="aguatec-thumbnail">
+                <div class="info-proyecto">
+                    <h5 class="titulo-proyecto">Aguatec Uruguaya S.R.L.</h5>
+                    <a href="http://aguatec.com.uy" target="_blank">
+                        <button class="boton boton-visita-proyecto">Visit</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="separador"></div>
+        <div class="boton-contacto">
+            <a href="./contactoIngles.html"><button>CONTACT</button></a>
+        </div>
+        <div class="separador"></div>
+    </div>
+
 
     <div class="separador"></div>
 
@@ -88,17 +152,22 @@
     <script src="./js/loader.js"></script>
 
     <script>
-        let check = document.querySelector(".check")
+        let botonIngles = document.getElementById("botonIngles")
+        let botonEspanol = document.getElementById("botonEspanol")
+        let cuerpoEspanol = document.getElementById("cuerpoEspanol")
+        let cuerpoIngles = document.getElementById("cuerpoIngles")
 
-        check.addEventListener("click", idioma)
+        botonIngles.addEventListener("click", mostrarIngles)
+        botonEspanol.addEventListener("click", mostrarEspanol)
 
-        function idioma() {
-            let id = check.checked
-            if (id == true) {
-                location.href = "../inicioIngles.html"
-            } else {
-                location.href = "../index.html"
-            }
+        function mostrarIngles() {
+            cuerpoEspanol.classList.toggle("oculto")
+            cuerpoIngles.classList.toggle("oculto")
+        }
+
+        function mostrarEspanol() {
+            cuerpoEspanol.classList.toggle("oculto")
+            cuerpoIngles.classList.toggle("oculto")
         }
     </script>
 
