@@ -99,30 +99,36 @@ h1 {
   color: white;
   font-family: bebaskai;
   font-size: 4rem;
+  filter: drop-shadow(1px 1px 2px #000000);
 }
 
 h2 {
   color: white;
   font-family: helvetica;
   font-size: 3rem;
+  filter: drop-shadow(1px 1px 2px #000000);
 }
 
 h3 {
   color: white;
   font-family: helvetica;
   font-size: 2rem;
+  filter: drop-shadow(1px 1px 2px #000000);
 }
 
 h5 {
   color: white;
   font-family: helvetica;
   font-size: 1.8rem;
+  filter: drop-shadow(1px 1px 2px #000000);
 }
 
 p {
   color: white;
   font-family: helvetica;
   font-size: 1rem;
+  filter: drop-shadow(1px 1px 2px #000000);
+
 }
 
 ::-webkit-scrollbar {
@@ -141,10 +147,11 @@ html {
 }
 
 body {
-  height: 100vh;
+  /*   height: 100vh; */
   background-image: url(../media/background.svg);
   background-attachment: fixed;
   background-size: cover;
+  backdrop-filter: blur(2px);
 }
 
 div.separador {
@@ -274,6 +281,7 @@ div.separador {
 .titulo .iconos_curso img {
   width: 3rem;
   margin: 1.5rem 1rem 0 1rem;
+  filter: drop-shadow(1px 1px 2px #000000);
 }
 
 .biografia {
